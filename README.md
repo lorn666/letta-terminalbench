@@ -9,12 +9,12 @@ First, install the dependencies:
 pip install -r requirements.txt
 ```
 
-Second, create the `.env` file and add your anthropic api key in the file.
+Second, create a `.env` file and add your Anthropic API key:
 ```bash
 ANTHROPIC_API_KEY=your_anthropic_api_key
 ```
 
-Then, run the Letta server with Docker:
+Then, start the Letta server with Docker:
 ```bash
 docker run \
   -v ~/.letta/.persist/pgdata:/var/lib/postgresql/data \
@@ -22,23 +22,10 @@ docker run \
   --env-file .env \
   letta/letta:latest
 ```
-
-If you have the proxy, please run this command instead:
-```bash
-docker run \
-  -v ~/.letta/.persist/pgdata:/var/lib/postgresql/data \
-  -p 8283:8283 \
-  --env-file .env \
-  -e HTTP_PROXY=http://host.docker.internal:7897 \
-  -e HTTPS_PROXY=http://host.docker.internal:7897 \
-  -e NO_PROXY=localhost,127.0.0.1,::1 \
-  letta/letta:latest
-```
-
-The detailed document is [here](https://docs.letta.com/guides/docker/).
+More detailed instructions for running the Letta server are available [here](https://docs.letta.com/guides/docker/).
 
 
-Finally, tun the following command to run the evaluation.
+Finally, run the following command to start the evaluation:
 
 ```bash
 tb run \
