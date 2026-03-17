@@ -49,3 +49,14 @@ tb run \
 
 # note this script supports --model anthropic/*. However, one can modify LlmConfig to use other models.
 ```
+
+## Others
+To enter the docker shell, you can run the following command.
+First, find the docker_id by running:
+```bash
+docker ps
+```
+Then, run the following command to enter the docker shell:
+```bash
+docker exec -it <docker_id> bash
+```
