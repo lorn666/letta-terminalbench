@@ -3,6 +3,13 @@ Official code for Letta on [Terminal-Bench](https://www.tbench.ai/news/announcem
 
 Check out our technical blog for more information: [Blog](https://www.letta.com/blog/terminal-bench)
 
+## Quick Start
+First, install the dependencies:
+```bash
+pip install -r requirement.txt
+```
+Then, run the docker by openning the docker desktop. Finally, tun the following command to run the evaluation.
+
 ```bash
 tb run \
     --dataset-name terminal-bench-core \
